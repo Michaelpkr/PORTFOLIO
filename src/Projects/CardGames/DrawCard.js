@@ -6,8 +6,8 @@ const CallCardApi = () => {
 	}
 
 	return(
-		<div>
-			<button onClick={CallCardApi}>Draw Cards</button>
+		<div className="drawCards">
+			<button className="drawCardsBtn" onClick={CallCardApi}>Draw Cards</button>
 		</div>
 	)
 }

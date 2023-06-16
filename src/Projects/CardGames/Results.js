@@ -25,8 +25,8 @@ function determinesResults(playerCard, computerCard){
 }
 
 return(
-	<div>
-		<span>{determinesResults(playerCard, computerCard)}</span>
+	<div className="resultsDiv">
+		<span className="results">{determinesResults(playerCard, computerCard)}</span>
 	</div>
 )
 }

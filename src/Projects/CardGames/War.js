@@ -29,9 +29,9 @@ fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
 
 return(
 	<div>
-	{cardData.remaining == 0 ? <StartGame setDeckId={setDeckId} /> :<DrawCard deckId={deckId} setCardData={setCardData}/>}
 	<Cards cardData={cardData}/>
 	<Results cardData={cardData}/>
+	{cardData.remaining == 0 ? <StartGame /> :<DrawCard deckId={deckId} setCardData={setCardData}/>}
 	 </div>
 )
 
