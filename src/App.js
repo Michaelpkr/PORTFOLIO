@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header.js';
+import Projects from './Projects';
+import About from './About';
+import Home from './Home';
+import Footer from './Footer'
+import { useState } from 'react';
+import Pokedex from './Projects/Pokedex';
+import War from './Projects/CardGames/War';
+import ToDo from './Projects/ToDo/ToDo'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const [currentPage, setsCurrentPage] = useState(<div><Header /><Home /></div>)
+
+function clickHandler(e){
+  if(e.target.innerHTML === "PROJECTS"){
+    setsCurrentPage(<div><Header /><Projects /><Footer/></div>)
+  }else if(e.target.innerHTML === "ABOUT"){
+    setsCurrentPage(<div><Header /><About /><Footer/></div>)
+  }else if (e.target.innerHTML === "&lt;MP/&gt;"){
+    setsCurrentPage(<div><Header /><Home /></div>)
+  }else if (e.target.innerHTML === "&lt;-/"){
+    setsCurrentPage(<div><Header /><Home /></div>)
+  }else if (e.target.innerHTML === "PokeDex"){
+    setsCurrentPage(<div><Header /><Pokedex /><Footer/></div>)
+  }else if(e.target.innerHTML === "Card Games"){
+    setsCurrentPage(<div><Header /><War /><Footer/></div>)
+  }else if(e.target.innerHTML === "To-Do List"){
+    setsCurrentPage(<div><Header /><ToDo /><Footer/></div>)
+  }else return
+}
+return (
+  <div onClick={clickHandler}>
+    {currentPage}
+  </div>
+)
 }
 
 export default App;

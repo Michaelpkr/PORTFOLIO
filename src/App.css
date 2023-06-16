@@ -1,38 +1,293 @@
-.App {
+*{
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Work Sans', sans-serif;
+  animation: fadeIn 0.75s;
+}
+
+h2, h3, p{
+  font-weight:100;
+  font-size: 6em;
+  color: rgba(16, 59, 80, 0.5);
+}
+
+h3{
+  font-size: 3em;
+}
+
+body{
+  background-color: lightgray;
+}
+
+p{
+  font-size: 2em;
+}
+
+header {
+  background-color: rgba(16, 59, 80, 0.5);
+  height: 10vh;
+  position: sticky; top: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.homeNav{
+  color: rgba(16, 59, 80, 0.5);
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 80vh;
+}
+
+.homeNav div{
+  margin: 0 auto;
+}
+
+.logo{
+  font-size: 4em;
+  font-weight: 100;
+  color: lightgray;
+  margin: 0 auto;
+}
+
+#arrow {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+}
+
+#projects, #about, #arrow{
+  cursor: pointer;
+}
+
+.projectsDiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project{
+  height: 350px;
+  width: 300px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  cursor: pointer;
+}
+
+.project h3{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.projectImg{
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border-radius: 100%;
+  background-color: lightgreen;
+  border: solid 4px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#pokedex {
+  border: solid 3px black;
+  text-align: center;
+  padding: 30px;
+  justify-content: space-between;
+  background-color: red;
+  width: 30vh;
+  min-width: 30vh;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#pokemonScreen {
+  min-width: 25vh;
+  border: black 2px solid;
+  border-bottom: none;
+  background-color: gray;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-block-start: 0px;
+  padding-bottom: 0px;
+}
+
+#pokemonname {
+  max-width: 25vh;
+  width: 100%;
+  border-left: black solid 2px;
+  border-right: black solid 2px;
+  background-color: gray;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: black;
+  font-weight: 600;
+}
+
+#pokemontype {
+  background-color: lightgray;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+  min-width: 25vh;
+  width: 100%;
+  color: black;
+}
+
+#pokemonheight {
+  background-color: gray;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+  max-width: 25vh;
+  width: 100%;
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+  color: black;
+}
+
+#pokemonweight, #pokemontype {
+  background-color: gray;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1em;
+  max-width: 25vh;
+  width: 100%;
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+  color: black;
+}
+
+#pokemoninput {
+  margin: 0 auto;
+  margin-top: 10%;
+  text-align: center;
+  font-family: 'Silkscreen', sans-serif;
+  width: 90%;
+}
+
+#getPokemon {
+  text-align: center;
+  font-family: 'Silkscreen', sans-serif;
+  width: 40%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+#getRandomPokemon {
+  text-align: center;
+  font-family: 'Silkscreen', sans-serif;
+  width: 50%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.taskContainer{
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.task{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.taskHeader{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-weight:100;
+  font-size: 4em;
+  color: rgba(16, 59, 80, 0.5);
+}
+
+
+.addTask{
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-around;
+}
+
+.addTaskBtn{
+  border-radius: 0 20px 20px 0;
+  border: solid 2px rgba(16, 59, 80, 0.5);
+  border-left: rgba(16, 59, 80, 0.5) solid 2px;
+}
+
+.addTaskBtn, .removeTaskBtn{
+  padding: 20px;
+  color: rgba(16, 59, 80, 0.5);
+  font-weight: 600;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.addTaskInput{
+  padding: 20px;
+  background-color: rgba(16, 59, 80, 0.5);
   color: white;
+  font-size: 1.4em;
+  font-weight: 100;
+  border: solid 2px rgba(16, 59, 80, 0);
+  border-right: none
 }
 
-.App-link {
-  color: #61dafb;
+input[type="checkbox"]{
+  width: 60px;
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  accent-color: rgba(16, 59, 80, 0.5);
+}
+
+input:checked{
+  accent-color: rgba(16, 59, 80, 0.5);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+
+.addTaskInput::placeholder{
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4em;
 }
