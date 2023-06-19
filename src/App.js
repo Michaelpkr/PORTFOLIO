@@ -14,6 +14,7 @@ function App() {
 const [currentPage, setsCurrentPage] = useState(<div><Header /><Home /></div>)
 
 function clickHandler(e){
+  console.log(e.target.id)
   if(e.target.innerHTML === "PROJECTS"){
     setsCurrentPage(<div><Header /><Projects /><Footer/></div>)
   }else if(e.target.innerHTML === "ABOUT"){
@@ -22,11 +23,11 @@ function clickHandler(e){
     setsCurrentPage(<div><Header /><Home /></div>)
   }else if (e.target.innerHTML === "&lt;-/"){
     setsCurrentPage(<div><Header /><Home /></div>)
-  }else if (e.target.innerHTML === "PokeDex"){
+  }else if (e.target.innerHTML || e.target.alt === "PokeDex"){
     setsCurrentPage(<div><Header /><Pokedex /><Footer/></div>)
-  }else if(e.target.innerHTML === "Card Games"){
+  }else if(e.target.innerHTML || e.target.alt === "Card Games"){
     setsCurrentPage(<div><Header /><War /><Footer/></div>)
-  }else if(e.target.innerHTML === "To-Do List"){
+  }else if(e.target.innerHTML || e.target.alt === "To-Do List"){
     setsCurrentPage(<div><Header /><ToDo /><Footer/></div>)
   }else return
 }
