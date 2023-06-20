@@ -5,7 +5,8 @@ import Tasklist from './Tasklist';
 import RemoveTaskButton from './RemoveTask';
 
 function App() {
-	const [taskList, setsTaskList] = useState([])
+	const [taskList, setsTaskList] = useState(JSON.parse(localStorage.getItem("taskList")))
+  localStorage.setItem("taskList", (JSON.stringify(taskList)))
 
   function toggleComplete(id){
     setsTaskList(prevState => prevState.map(task =>{

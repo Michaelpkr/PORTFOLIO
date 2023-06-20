@@ -263,6 +263,11 @@ header {
   border-left: rgba(16, 59, 80, 0.5) solid 2px;
 }
 
+.addTaskBtn:hover{
+color: rgba(16, 59, 80, 1);
+cursor: pointer;
+}
+
 .addTaskBtn, .removeTaskBtn{
   padding: 20px;
   color: rgba(16, 59, 80, 0.5);
