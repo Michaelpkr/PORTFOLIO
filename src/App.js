@@ -15,7 +15,6 @@ function App() {
 const [currentPage, setsCurrentPage] = useState(<div><Header /><Home /></div>)
 
 function clickHandler(e){
-  console.log(e.target.innerHTML, e.target.alt)
   if(e.target.innerHTML === "PROJECTS"){
     setsCurrentPage(<div><Header /><Projects /><HomeFooter/></div>)
   }else if(e.target.innerHTML === "ABOUT"){

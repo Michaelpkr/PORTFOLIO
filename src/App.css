@@ -73,8 +73,14 @@ header {
   padding-top: 20px;
 }
 
-#projects, #about, #arrow{
+.link{
   cursor: pointer;
+  color: rgba(16, 59, 80, 0.5)
+}
+
+.link:hover{
+  cursor: pointer;
+  color: rgba(16, 59, 80, 1)
 }
 
 .projectsDiv{

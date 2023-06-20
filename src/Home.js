@@ -4,10 +4,10 @@ export default function Home () {
 	return(
 		<div className="homeNav">
 			<div>
-				<h2 id="projects">PROJECTS</h2>
+				<h2 className="link">PROJECTS</h2>
 			</div>
 			<div>
-				<h2 id="about">ABOUT</h2>
+				<h2 className="link">ABOUT</h2>
 			</div>
 		</div>
 	)

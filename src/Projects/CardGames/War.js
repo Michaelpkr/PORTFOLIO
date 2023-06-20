@@ -8,6 +8,7 @@ import StartGame from "./StartGame"
 
 export default function War () {
 const [deckId, setDeckId] = useState("")
+const [gameState, setsGameState] = useState(true)
 const [cardData, setCardData] = useState({cards:[
 	{
 	value: "",
@@ -27,12 +28,13 @@ fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
 	.then(res => setDeckId(res.deck_id))
 }, [])
 
-return(
-	<div>
-	<Cards cardData={cardData}/>
-	<Results cardData={cardData}/>
-	{cardData.remaining == 0 ? <StartGame /> :<DrawCard deckId={deckId} setCardData={setCardData}/>}
-	 </div>
-)
+
+	return (
+		<div>
+			<Cards cardData={cardData}/>
+			<Results cardData={cardData}/>
+			{cardData.remaining == 0 ? <StartGame /> : <DrawCard deckId={deckId} cardData={cardData} setCardData={setCardData}/>}
+	 	</div>
+	 )
 
 }
